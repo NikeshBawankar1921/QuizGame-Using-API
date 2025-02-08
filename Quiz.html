@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game UI</title>
+    <link rel="icon" href="./Image/23831.jpg">
+    <link rel="stylesheet" href="./output.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body class="bg-gradient-to-r from-blue-400 to-green-400 flex flex-col items-center justify-between min-h-screen">
+
+    <!-- Header -->
+    <header
+        class="w-full bg-[#152A46] text-white py-4 px-6 flex justify-between items-center shadow-md  sticky top-0 z-50">
+        <h1 class="text-xl font-bold">Quiz Game </h1>
+        <div class="flex items-center space-x-2">
+            <i class="fa-solid fa-user"></i>
+            <p class="text-lg font-semibold" id="username2">Username</p>
+        </div>
+    </header>
+
+
+
+
+
+    <!--Questiion display session-->
+    <div id="questions"
+        class="none text-gray-600  bg-opacity-20 bg-white/30 backdrop-blur-sm  w-50 rounded-lg py-4 px-6 fjustify-between items-center shadow-md m-6 border-2">
+
+        <label
+            class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-xl text-white py-2 px-4 text-center shadow-md border-2 w-50% mx-auto block">
+
+            Title: <span class="font-semibold" id="title1"> Loading... </span>
+        </label>
+
+        <label
+            class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-xl text-white py-2 px-4 text-center shadow-md  w-50% mx-auto block mt-2">
+            Topic: <span class="font-semibold" id="topic1"> Loading... </span>
+        </label>
+
+        <div class="grid " mt-4>
+            <div class="text-sm flex justify-center font-semibold item-center">
+                <div class="grid grid-cols-2 justify-between item center">
+                    <p>Q : <span id="Qnumber">1</span>/10 </p>
+                    <p><span>Time : </span><span id="time">00:00</span><br></p>
+                </div>
+            </div>
+
+            <lable class="font-semibold w-full mt-5" id="Que">Loading...</lable>
+
+            <label id="op1"
+                class="text-sm  bg-white bg-opacity-20 backdrop-blur-sm w-full rounded-xl text-gray-600 py-2 px-2 justify-between  shadow-md  border-2 m-1 md:hover:bg-blue-500">
+                <p id="o1">Loading...</p>
+            </label>
+
+            <label id="op2"
+                class="text-sm bg-white bg-opacity-20 backdrop-blur-sm w-full rounded-xl text-gray-600 py-2 px-2 justify-between  shadow-md  border-2 m-1 md:hover:bg-blue-500">
+                <p id="o2">Loading...</p>
+            </label>
+
+            <label id="op3"
+                class="text-sm  bg-white bg-opacity-20 backdrop-blur-sm w-full rounded-xl text-gray-600 py-2 px-2 justify-between  shadow-md  border-2 m-1 md:hover:bg-blue-500">
+                <p id="o3">Loading...</p>
+            </label>
+
+            <label id="op4"
+                class="text-sm  bg-white bg-opacity-20 backdrop-blur-sm w-full rounded-xl text-gray-600 py-2 px-2 justify-between  shadow-md  border-2 m-1 md:hover:bg-blue-500">
+                <p id="o4">Loading...</p>
+            </label>
+
+        </div>
+
+
+
+        <button class="bg-blue-500 px-10 py-2 rounded-lg text-white m-2" id="next" onclick="nextQue()">Next</button>
+
+        <button class="hidden bg-pink-500 px-10 py-2 rounded-lg text-white m-2 " id="end"
+            onclick="questionsdisplay()">Submit Quiz</button>
+    </div>
+
+    <!--Custom aler-->
+    <div id="alertview"
+        class="hidden gride bg-white bg-opacity-20 backdrop-blur-sm w-50 rounded-lg text-white py-4 px-6 items-center shadow-md m-6 border-2">
+        <label
+            class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-xl text-white py-2 px-4 text-center shadow-md border-2 w-50% mx-auto block">
+
+            <span class="font-semibold"> Alert !!</span>
+        </label>
+        <p id="alertText" class="text-black">Alert willbe shown here</p>
+        <button class="bg-green-500" id="OKbutton" onclick="hideAlertView()">OK</button>
+    </div>
+
+
+
+
+
+    <!--result-->
+    <div id="MainResult" class="hidden  w-full h-screen bg-cover bg-center bg-repeat flex-col items-center justify-center text-white text-center p-8"
+        style="background-image: url('./Image/Ani.gif')">
+        <div id="questions"
+            class="none  bg-opacity-20 bg-white/30 backdrop-blur-sm  w-50 rounded-lg text-white py-4 px-6 fjustify-between items-center shadow-md m-6 border-2">
+
+            <div class="bg-black p-6 rounded-2xl shadow-lg w-3/4 md:w-1/2 text-black">
+                <h2 class="text-3xl font-bold mb-4">Quiz Completed!</h2>
+                <p class="text-lg">Your Score: <span class="font-semibold text-yellow-400" id="showResult">0</span></p>
+                <p class="text-md mt-2">Thank you for participating!</p>
+            </div>
+        </div>
+        <button class="bg-blue-500 px-10 py-2 rounded-lg text-white m-2" id="back" onclick="mainScreen()">BACK</button>
+    </div>
+
+   
+
+
+    <footer class="w-full bg-[#152A46] text-white py-3 text-center mt-6 shadow-md sticky bottom-0 z-50">
+        <p>© 2025 Quiz Game. All rights reserved.</p>
+    </footer>
+    <script src="Quiz.js">  </script>
+
+
+</body>
+
+</html>
