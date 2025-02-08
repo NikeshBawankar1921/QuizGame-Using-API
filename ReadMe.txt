@@ -66,6 +66,12 @@ The **Quiz Game** is a web-based application that dynamically fetches quiz data 
 - 📚 Implement different quiz categories.
 - 🏆 Include a leaderboard for competitive gameplay.
 
+## 🌍 Live Demo
+🔗 [Test the Quiz Game](https://nikeshbawankar1921.github.io/QuizGame-Using-API/)
+
+## 📹 Demo Video & Screenshots
+📽️ [Watch Demo](https://drive.google.com/file/d/1BG_tv6S5E-mpsUAR_VyOaHtn9j8oLbnx/view?usp=sharing)
+
 ## 📜 License
 This project is open-source and available for personal and educational use.
 
